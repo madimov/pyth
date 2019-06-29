@@ -104,7 +104,7 @@ class Rtf15Reader(PythReader):
     def go(self):
         self.source.seek(0)
 
-        if self.source.read(5) != br"{\rtf":
+        if self.source.read(5) != br"{\\rtf":
             from pyth.errors import WrongFileType
             raise WrongFileType("Doesn't look like an RTF file")
 
